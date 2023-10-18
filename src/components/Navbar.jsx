@@ -39,7 +39,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex justify-center items-center gap-4">
-                    <IoCarSport className="text-5xl text-white"></IoCarSport>
+                    <IoCarSport className="text-5xl text-[#45D792]"></IoCarSport>
                     <h4 className="text-4xl font-bold text-white font-kanit">DREAM CAR</h4> 
                 </div> 
             </div>

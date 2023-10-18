@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "Tesla",
+      "image": "https://i.ibb.co/ZSPtWTt/images.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Mercedes-Benz",
+      "image": "https://i.ibb.co/t3nZND3/Mercedes-Benz-Logo.png"
+    },
+    {
+      "id": 3,
+      "name": "Mazda",
+      "image": "https://i.ibb.co/rFTk8WM/Mazda-Logo.png"
+    },
+    {
+      "id": 4,
+      "name": "B M W",
+      "image": "https://i.ibb.co/9q24jyg/taipei-taiwan-oct-d-rendering-bmw-logo-bmw-german-automobile-manufacturer-d-rendering-bmw-logo-bmw-g.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Audi",
+      "image": "https://i.ibb.co/Rc4kqms/Audi-logo-history-and-meaning-L-03-03-1024x640.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Toyota",
+      "image": "https://i.ibb.co/fSqDt5j/toyota.jpg"
+    }
+  ]
+  
