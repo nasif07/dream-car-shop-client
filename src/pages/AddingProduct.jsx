@@ -19,6 +19,17 @@ const AddingProduct = () => {
             rating,
         }
         console.log(allItem);
+        fetch('http://localhost:5000/allcars', {
+            method: "POST",
+            headers: {
+                "content-Type": "application/json",
+            },
+            body: JSON.stringify(allItem)
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+            })
     }
     return (
         <div className="max-w-[1500px] mx-auto">

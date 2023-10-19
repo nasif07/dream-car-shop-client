@@ -7,6 +7,7 @@ import UpcomingCars from "../components/UpcomingCars";
 const Home = () => {
     const carBrands = useLoaderData();
     // console.log(carBrands);
+    // console.log(carBrands);
     return (
         <div>
             <Banner></Banner>
