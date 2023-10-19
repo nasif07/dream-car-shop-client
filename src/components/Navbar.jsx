@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoCarSport } from "react-icons/io5";
 
 // import carLogo from "../assets/carlogo.png"
@@ -20,6 +20,11 @@ const Navbar = () => {
         <li>
             <NavLink to="/mycart" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "text-[#45D792]  underline" : ""}>My Cart
+            </NavLink>
+        </li>
+        <li>
+            <NavLink to="/signup" className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-[#45D792]  underline" : ""}>Sign UP
             </NavLink>
         </li>
 
@@ -49,7 +54,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Log in</a>
+                <Link to="/login">
+                <a className="btn">Log in</a></Link>
             </div>
         </div>
         </div>

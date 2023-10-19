@@ -25,7 +25,7 @@ const AllCars = () => {
 
 
     return (
-        <div className="max-w-[1500px] mx-auto">
+        <div className="max-w-[1500px] mx-auto pt-12">
             <div>
                 <div className="carousel w-full h-[60vh]">
                     <div id="slide1" className="carousel-item relative w-full">

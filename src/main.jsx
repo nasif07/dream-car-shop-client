@@ -10,12 +10,15 @@ import Home from './pages/Home';
 import AddingProduct from './pages/AddingProduct';
 import Mycart from './pages/Mycart';
 import AllCars from './components/AllCars';
+import ErrorPage from './pages/ErrorPage';
+import Login from './pages/Login';
+import Registration from './pages/Registration';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement: <h1>this is error</h1>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -34,6 +37,14 @@ const router = createBrowserRouter([
         path: "/allcars/:id",
         element: <AllCars></AllCars>,
         loader: () => fetch(`http://localhost:5000/allcars`)
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/signup",
+        element: <Registration></Registration>
       }
     ]
   },
