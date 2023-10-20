@@ -14,6 +14,8 @@ import ErrorPage from './pages/ErrorPage';
 import Login from './pages/Login';
 import Registration from './pages/Registration';
 import AuthProvider from './provider/AuthProvider';
+import PrivateRoute from './privateRoute/privateRoute';
+
 
 const router = createBrowserRouter([
   {
@@ -28,7 +30,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/addproduct",
-        element: <AddingProduct></AddingProduct>
+        element: <PrivateRoute>
+          <AddingProduct></AddingProduct>
+        </PrivateRoute>
+        
       },
       {
         path: "/mycart",

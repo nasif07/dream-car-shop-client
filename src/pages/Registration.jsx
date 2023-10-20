@@ -3,12 +3,13 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import swal from "sweetalert";
 
 
 
 const Registration = () => {
 
-    const { emailPasswordSignIn, googleSignIn } = useContext(AuthContext);
+    const { emailPasswordSignIn, googleSignIn, handleUpdateProfile } = useContext(AuthContext);
 
 
     const handlSignUp = e => {
@@ -31,9 +32,14 @@ const Registration = () => {
         emailPasswordSignIn(email, password)
         .then(res => {
             console.log(res);
+            handleUpdateProfile(name, photo)
+            .then(()=>{
+                swal("Good job!", "register successful!", "success");
+            })
         })
         .catch(err => {
-            console.log(err.messege);
+            // console.log(err);
+            toast.error(err.message)
         })
     }
 
