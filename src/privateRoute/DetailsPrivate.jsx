@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { Navigate } from "react-router-dom";
 
-const DetailsRoute = ({ children }) => {
+const DetailsPrivate = ({ children }) => {
 
     const { user, loading } = useContext(AuthContext);
 
@@ -18,4 +18,4 @@ const DetailsRoute = ({ children }) => {
 
 };
 
-export default DetailsRoute;
+export default DetailsPrivate;

@@ -10,7 +10,7 @@ const AllBrand = ({carBrands}) => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 max-w-[1500px] mx-auto gap-16">
                 {
-                    carBrands.map(brand => <BrandCategory key={brand.id} brand={brand}></BrandCategory>)
+                    carBrands?.map(brand => <BrandCategory key={brand.id} brand={brand}></BrandCategory>)
                 }
             </div>
         </div>
