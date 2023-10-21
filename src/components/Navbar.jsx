@@ -52,9 +52,9 @@ const Navbar = () => {
                             {items}
                         </ul>
                     </div>
-                    <div className="flex justify-center items-center gap-4">
+                    <div className="md:flex justify-center items-center gap-4">
                         <IoCarSport className="text-5xl text-[#45D792]"></IoCarSport>
-                        <h4 className="text-4xl font-bold text-white font-kanit">DREAM CAR</h4>
+                        <h4 className="md:text-4xl text-xl font-bold text-white font-kanit">DREAM CAR</h4>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -64,7 +64,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        user ? <h1 className="mr-2 font-semibold text-lg text-white">{user.displayName}</h1> : <h1></h1>
+                        user ? <h1 className="mr-2 font-semibold hidden md:flex text-lg text-white">{user.displayName}</h1> : <h1></h1>
                     }
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">

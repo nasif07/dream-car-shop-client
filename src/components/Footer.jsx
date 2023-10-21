@@ -1,9 +1,10 @@
 
 const Footer = () => {
     return (
-        <div className="  bg-[#13141A]">
+        <div className=" bg-[#13141A] pl-28 md:pl-0">
             <div className="max-w-[1500px] mx-auto py-16">
             <footer className="footer text-white">
+                <div className="footer">
                 <nav>
                     <header className="footer-title">Services</header>
                     <a className="link link-hover">Branding</a>
@@ -11,13 +12,14 @@ const Footer = () => {
                     <a className="link link-hover">Marketing</a>
                     <a className="link link-hover">Advertisement</a>
                 </nav>
-                <nav>
+                <nav className="">
                     <header className="footer-title">Company</header>
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Press kit</a>
                 </nav>
+                </div>
                 <nav>
                     <header className="footer-title">Social</header>
                     <div className="grid grid-flow-col gap-4">

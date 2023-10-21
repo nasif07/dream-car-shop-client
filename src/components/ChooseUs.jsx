@@ -9,8 +9,8 @@ const ChooseUs = () => {
         <div className="bg-[#FAF8FB]">
             <div className="py-20 max-w-[1500px] mx-auto">
                 <div className="text-center font-kanit">
-                    <h1 className="font-bold text-6xl pb-8"><span className="text-[#45D792]">How</span> Does It Work</h1>
-                    <p className="text-xl mb-12">Here some reason to choose us</p>
+                    <h1 className="font-bold text-4xl md:text-6xl pb-8"><span className="text-[#45D792]">How</span> Does It Work</h1>
+                    <p className="md:text-xl mb-12">Here some reason to choose us</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                         <div className="card">
                             <div className="card-body items-center text-center">

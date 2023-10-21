@@ -6,10 +6,10 @@ const UpcomingCars = () => {
     return (
         <div className="max-w-[1500px] mx-auto pt-16">
             <div className="text-center font-kanit">
-                <h1 className="font-bold text-6xl pb-8"><span className="text-[#45D792]">Upcoming</span> Cars</h1>
-                <p className="text-xl mb-12">Here are some of the featured cars in different categories</p>
+                <h1 className="font-bold text-4xl md:text-6xl pb-8"><span className="text-[#45D792]">Upcoming</span> Cars</h1>
+                <p className="md:text-xl mb-12">Here are some of the featured cars in different categories</p>
             </div>
-            <div className="grid md:grid-cols-2 grid-cols-2 lg:grid-cols-4 gap-10 px-10 lg:px-0 pb-16 pt-4">
+            <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-10 px-10 lg:px-0 pb-16 pt-4">
                 <div className="card  font-kanit text-center border">
                     <figure><img className="pt-6" src={recent1}/></figure>
                     <div className="card-body">

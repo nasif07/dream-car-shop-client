@@ -8,12 +8,12 @@ const Banner = () => {
     }
     return (
         <>
-            <div className="h-[85vh] bg-cover" style={myStyle} >
+            <div className="md:h-[85vh] bg-cover h-[70vh]" style={myStyle} >
                 <div className="h-[85vh]" style={{ backgroundColor: "rgba(0,0,0,0.60)" }}>
-                    <div className="max-w-[1500px] mx-auto text-white pt-[200px] font-kanit">
-                        <h1 className="mb-5 text-[75px] font-bold">The Largest Car <br /> Marketplace</h1>
-                        <p className="mb-10 text-xl">Car dealerships may sell new cars from one or several manufacturers, <br /> as well as used cars.</p>
-                        <button className="btn text-white bg-[#45D792]">Get Started</button>
+                    <div className="pl-8 ml:pl-0 max-w-[1500px] mx-auto text-white pt-20 md:pt-[200px] font-kanit">
+                        <h1 className="mb-5 text-3xl md:text-7xl font-bold">The Largest Car <br /> Marketplace</h1>
+                        <p className="mb-10 md:text-xl">Car dealerships may sell new cars from one or several manufacturers, <br /> as well as used cars.</p>
+                        <button className="btn hidden md:block text-white bg-[#45D792]">Get Started</button>
                     </div>
                 </div>
             </div>

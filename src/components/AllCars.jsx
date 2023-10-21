@@ -25,9 +25,9 @@ const AllCars = () => {
 
 
     return (
-        <div className="max-w-[1500px] mx-auto pt-12">
+        <div className="max-w-[1500px] mx-auto pt-12 px-6 md:px:0">
             <div>
-                <div className="carousel w-full h-[60vh]">
+                <div className="carousel w-full h-[220px] md:h-[60vh]">
                     <div id="slide1" className="carousel-item relative w-full">
                         <img src={ad1} className="w-full " />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

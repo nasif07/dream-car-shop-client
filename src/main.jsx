@@ -17,6 +17,9 @@ import AuthProvider from './provider/AuthProvider';
 import PrivateRoute from './privateRoute/privateRoute';
 import CarDetailes from './components/CarDetailes';
 import DetailsPrivate from './privateRoute/DetailsPrivate';
+import CartPrivate from './privateRoute/CartPrivate';
+import UpdateForm from './components/UpdateForm';
+import { ThemeProvider } from '@material-tailwind/react';
 
 
 const router = createBrowserRouter([
@@ -38,20 +41,29 @@ const router = createBrowserRouter([
 
       },
       {
+        path: "/updateproduct/:id",
+        element: <UpdateForm></UpdateForm>,
+        loader: ({params}) => {
+          // console.log(params);
+          return fetch(`https://dream-car-shop-server-i06vlcvw9-nasif07s-projects.vercel.app/allcars/${params.id}`)
+        }
+      },
+      {
         path: "/mycart",
-        element: <Mycart></Mycart>
+        element: <CartPrivate><Mycart></Mycart></CartPrivate>,
+        loader: () => fetch(`https://dream-car-shop-server-i06vlcvw9-nasif07s-projects.vercel.app/allcart`)
       },
       {
         path: "/allcars/:id",
         element: <AllCars></AllCars>,
-        loader: () => fetch(`http://localhost:5000/allcars`)
+        loader: () => fetch(`https://dream-car-shop-server-i06vlcvw9-nasif07s-projects.vercel.app/allcars`)
       },
       {
         path: "/allcars/carDetailes/:id",
         element: <DetailsPrivate>
           <CarDetailes></CarDetailes>
         </DetailsPrivate>,
-        loader: () => fetch(`http://localhost:5000/allcars`)
+        loader: () => fetch(`https://dream-car-shop-server-i06vlcvw9-nasif07s-projects.vercel.app/allcars`)
       },
       {
         path: "/login",
@@ -68,7 +80,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
+    <ThemeProvider>
       <RouterProvider router={router} />
+      </ThemeProvider>
     </AuthProvider>
   </React.StrictMode>,
 )
