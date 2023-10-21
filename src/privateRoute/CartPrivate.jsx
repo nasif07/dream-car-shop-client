@@ -3,6 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Navigate } from "react-router-dom";
 
 const CartPrivate = ({ children }) => {
+    
 
     const { user, loading } = useContext(AuthContext);
 

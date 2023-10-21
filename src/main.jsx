@@ -13,13 +13,18 @@ import AllCars from './components/AllCars';
 import ErrorPage from './pages/ErrorPage';
 import Login from './pages/Login';
 import Registration from './pages/Registration';
-import AuthProvider from './provider/AuthProvider';
+import AuthProvider, { AuthContext } from './provider/AuthProvider';
 import PrivateRoute from './privateRoute/privateRoute';
 import CarDetailes from './components/CarDetailes';
 import DetailsPrivate from './privateRoute/DetailsPrivate';
 import CartPrivate from './privateRoute/CartPrivate';
 import UpdateForm from './components/UpdateForm';
 import { ThemeProvider } from '@material-tailwind/react';
+
+
+
+
+
 
 
 const router = createBrowserRouter([
@@ -31,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("category.json")
+        loader: () => fetch("/category.json")
       },
       {
         path: "/addproduct",

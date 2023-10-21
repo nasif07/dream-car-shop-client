@@ -8,12 +8,18 @@ const Banner = () => {
         backgroundColor: "rgba(0,0,0,0.15)"
     }
 
-    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")
+    // const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")
+    const [theme, setTheme] = useState("light")
 
+    // useEffect(() => {
+    //     localStorage.setItem("theme", theme);
+    //     const localTheme = localStorage.getItem("theme");
+    //     document.querySelector("html").setAttribute("data-theme", localTheme)
+    // },[theme])
     useEffect(() => {
-        localStorage.setItem("theme", theme);
-        const localTheme = localStorage.getItem("theme");
-        document.querySelector("html").setAttribute("data-theme", localTheme)
+        // localStorage.setItem("theme", theme);
+        // const localTheme = localStorage.getItem("theme");
+        document.querySelector("html").setAttribute("data-theme", theme)
     },[theme])
 
     const handleToggle = (e) => {
