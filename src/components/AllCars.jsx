@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { BsTypeH1 } from "react-icons/bs";
 import { useLoaderData, useParams } from "react-router-dom";
 import ShowCar from "./ShowCar";
 import ad1 from "../assets/ad1.jpg"
@@ -8,6 +7,7 @@ import ad3 from "../assets/adver2.jpg"
 
 const AllCars = () => {
     const [cars, setCars] = useState();
+    const [nodata, setNOdata] = useState();
     const name = useParams();
     const allCars = useLoaderData();
     // console.log(name.id);
@@ -17,7 +17,9 @@ const AllCars = () => {
     useEffect(() => {
         const findCar = allCars.filter(selectCars => selectCars.brandName == name.id)
         // console.log(findCar);
-        setCars(findCar)
+        
+        findCar.length > 0 ? setCars(findCar) : setNOdata(findCar)
+
     }, [name.id, allCars])
     console.log(cars)
 
@@ -53,7 +55,7 @@ const AllCars = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 max-w-[1500px] mx-auto gap-16 py-24">
                 {
-                    cars?.map(car => <ShowCar car={car} key={car.name} ></ShowCar>)
+                    cars ? cars?.map(car => <ShowCar car={car} key={car.name} ></ShowCar>) : <h1 className="text-5xl text-center col-span-4 p-6 font-bold"><span className="text-[#45D792]">Sorry!</span> No available car this time.</h1>
                 }
             </div>
         </div>
